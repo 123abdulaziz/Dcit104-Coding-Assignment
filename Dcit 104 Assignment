@@ -1,0 +1,24 @@
+ // NAME: Amidu Abdul-Aziz
+ // STUDENT ID: 10967087
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i,j,maximum=1000,Number,sum=0;
+
+    for(i=2; i<=maximum; i++){
+        Number=1;
+        for(j=2; j<=i/2; j++){
+            if(i%j==0){
+                Number=0;
+                break;
+            }
+        }
+        if(Number==1){
+            sum+=i;
+        }
+    }
+    cout<<"sum of all prime numbers between 1 to  "<<maximum<<" is: "<<sum;
+    return 0;
+}
